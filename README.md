@@ -6,7 +6,7 @@ This project will be used for a series of git solution
 
 ### Exercise 1
 
-...bash
+```bash
 
 TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise
 $ git init
@@ -108,4 +108,4 @@ $ git push origin --delete test
 To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
 
 - [deleted] test
-  ...
+  ```
