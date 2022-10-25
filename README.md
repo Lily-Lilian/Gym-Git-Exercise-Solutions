@@ -487,3 +487,438 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
    44762e8..55edb8f  ft/service-redesign -> ft/service-redesign
 ```
+
+##### Bundle 3
+
+###### Exercise 1
+
+```bash
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git add team.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git status
+On branch ft/team-page
+Changes to be committed:
+ (use "git restore --staged <file>..." to unstage)
+       new file:   team.html
+
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+M       README.md
+A       team.html
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git add README.md
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git commit -m "bundle 2 exercise 2"
+[main a61af8c] bundle 2 exercise 2
+2 files changed, 128 insertions(+), 1 deletion(-)
+create mode 100644 team.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+ (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.35 KiB | 690.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+  0dfbf09..a61af8c  main -> main
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git add team.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git commit -m "feat:add team page"
+[ft/team-page 3244e36] feat:add team page
+1 file changed, 12 insertions(+)
+create mode 100644 team.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 466 bytes | 466.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+* [new branch]      ft/team-page -> ft/team-page
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git log
+commit 3244e362d5545887d34058e31dd3d5c7df4a5b2f (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 13:54:03 2022 +0200
+
+   feat:add team page
+
+commit 0dfbf09183bfd099034b20fa4a7b1ec2f8f85f0c
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 12:36:47 2022 +0200
+
+   added new services
+
+commit f11b4eac3b1ab9ffdb469065e90ae6cf735490ce
+Merge: 34d83d5 5e8a9c6
+Author: Chrissie <chrissiemhrk@gmail.com>
+Date:   Tue Oct 25 12:03:47 2022 +0200
+
+   Merge pull request #1 from Lily-Lilian/ft/bundle-2
+
+   added service page
+
+commit 34d83d5db0b98282777e4401f39bec8d77515c3b
+:
+commit 3244e362d5545887d34058e31dd3d5c7df4a5b2f (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 13:54:03 2022 +0200
+
+   feat:add team page
+
+commit 0dfbf09183bfd099034b20fa4a7b1ec2f8f85f0c
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 12:36:47 2022 +0200
+
+   added new services
+
+commit f11b4eac3b1ab9ffdb469065e90ae6cf735490ce
+Merge: 34d83d5 5e8a9c6
+Author: Chrissie <chrissiemhrk@gmail.com>
+Date:   Tue Oct 25 12:03:47 2022 +0200
+
+   Merge pull request #1 from Lily-Lilian/ft/bundle-2
+
+   added service page
+
+commit 34d83d5db0b98282777e4401f39bec8d77515c3b
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page)
+$ git cherry-pick 3244e362d5545887d34058e31dd3d5c7df4a5b2f
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+   git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch ft/contact-page
+You are currently cherry-picking commit 3244e36.
+ (all conflicts fixed: run "git cherry-pick --continue")
+ (use "git cherry-pick --skip" to skip this patch)
+ (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page|CHERRY-PICKING)
+$ git log
+commit a61af8cfa3654b0cf315448359b07c99ac45302c (HEAD -> ft/contact-page, origin/main, main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 13:44:59 2022 +0200
+
+   bundle 2 exercise 2
+
+commit 0dfbf09183bfd099034b20fa4a7b1ec2f8f85f0c
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 12:36:47 2022 +0200
+
+   added new services
+
+commit f11b4eac3b1ab9ffdb469065e90ae6cf735490ce
+Merge: 34d83d5 5e8a9c6
+Author: Chrissie <chrissiemhrk@gmail.com>
+Date:   Tue Oct 25 12:03:47 2022 +0200
+
+   Merge pull request #1 from Lily-Lilian/ft/bundle-2
+
+   added service page
+
+commit 34d83d5db0b98282777e4401f39bec8d77515c3b
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page|CHERRY-PICKING)
+$ git checkout ft/contact-page
+Already on 'ft/contact-page'
+warning: cancelling a cherry picking in progress
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page)
+$ git log
+commit a61af8cfa3654b0cf315448359b07c99ac45302c (HEAD -> ft/contact-page, origin/main, main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 13:44:59 2022 +0200
+
+   bundle 2 exercise 2
+
+commit 0dfbf09183bfd099034b20fa4a7b1ec2f8f85f0c
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 12:36:47 2022 +0200
+
+   added new services
+
+commit f11b4eac3b1ab9ffdb469065e90ae6cf735490ce
+Merge: 34d83d5 5e8a9c6
+Author: Chrissie <chrissiemhrk@gmail.com>
+Date:   Tue Oct 25 12:03:47 2022 +0200
+
+   Merge pull request #1 from Lily-Lilian/ft/bundle-2
+
+   added service page
+
+commit 34d83d5db0b98282777e4401f39bec8d77515c3b
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page)
+$ git cherry-pick 3244e362d5545887d34058e31dd3d5c7df4a5b2f
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+   git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch ft/contact-page
+You are currently cherry-picking commit 3244e36.
+ (all conflicts fixed: run "git cherry-pick --continue")
+ (use "git cherry-pick --skip" to skip this patch)
+ (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Untracked files:
+ (use "git add <file>..." to include in what will be committed)
+       contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page|CHERRY-PICKING)
+$ git cherry-pick --continue
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+   git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch ft/contact-page
+You are currently cherry-picking commit 3244e36.
+ (all conflicts fixed: run "git cherry-pick --continue")
+ (use "git cherry-pick --skip" to skip this patch)
+ (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Untracked files:
+ (use "git add <file>..." to include in what will be committed)
+       contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page|CHERRY-PICKING)
+$ git cherry-pick --skip
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page)
+$ git add contact.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page)
+$ git commit -m "feat:add contact page"
+[ft/contact-page a71381f] feat:add contact page
+1 file changed, 12 insertions(+)
+create mode 100644 contact.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page)
+$ git push origin ft/contact-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 462 bytes | 462.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+* [new branch]      ft/contact-page -> ft/contact-page
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git add --all
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git commit -m "feat:add faq page"
+[ft/faq-page 0023db2] feat:add faq page
+1 file changed, 12 insertions(+)
+create mode 100644 faq.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 470 bytes | 470.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+* [new branch]      ft/faq-page -> ft/faq-page
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git log
+commit 0023db20de9fa8d01e263a6c4354b23446886e5f (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:27:36 2022 +0200
+
+   feat:add faq page
+
+commit a71381fbd0ef6570459467483d0dbc6ac4107e47 (origin/ft/contact-page, ft/contact-page)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:20:25 2022 +0200
+
+   feat:add contact page
+
+commit a61af8cfa3654b0cf315448359b07c99ac45302c (origin/main, main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 13:44:59 2022 +0200
+
+   bundle 2 exercise 2
+
+commit 0dfbf09183bfd099034b20fa4a7b1ec2f8f85f0c
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 12:36:47 2022 +0200
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git log
+commit 0023db20de9fa8d01e263a6c4354b23446886e5f (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:27:36 2022 +0200
+
+   feat:add faq page
+
+commit a71381fbd0ef6570459467483d0dbc6ac4107e47 (origin/ft/contact-page, ft/contact-page)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:20:25 2022 +0200
+
+   feat:add contact page
+
+commit a61af8cfa3654b0cf315448359b07c99ac45302c (origin/main, main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 13:44:59 2022 +0200
+
+   bundle 2 exercise 2
+
+commit 0dfbf09183bfd099034b20fa4a7b1ec2f8f85f0c
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 12:36:47 2022 +0200
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git log
+commit 3244e362d5545887d34058e31dd3d5c7df4a5b2f (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 13:54:03 2022 +0200
+
+   feat:add team page
+
+commit 0dfbf09183bfd099034b20fa4a7b1ec2f8f85f0c
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 12:36:47 2022 +0200
+
+   added new services
+
+commit f11b4eac3b1ab9ffdb469065e90ae6cf735490ce
+Merge: 34d83d5 5e8a9c6
+Author: Chrissie <chrissiemhrk@gmail.com>
+Date:   Tue Oct 25 12:03:47 2022 +0200
+
+   Merge pull request #1 from Lily-Lilian/ft/bundle-2
+
+   added service page
+
+commit 34d83d5db0b98282777e4401f39bec8d77515c3b
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/team-page)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git status
+On branch ft/faq-page
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git revert 3244e362d5545887d34058e31dd3d5c7df4a5b2f
+[ft/faq-page 193ee96] Revert "feat:add team page"
+1 file changed, 12 deletions(-)
+delete mode 100644 team.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+   git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$  git push --set-upstream origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 277 bytes | 277.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+  0023db2..193ee96  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+```
