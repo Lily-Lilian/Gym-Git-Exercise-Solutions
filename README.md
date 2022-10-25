@@ -298,7 +298,7 @@ $
 
 #### Bundle 2
 
-### Exercise 1
+#### Exercise 1
 
 ```bash
 TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
@@ -371,4 +371,119 @@ Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
    352885d..5e8a9c6  ft/bundle-2 -> ft/bundle-2
+```
+
+#### Exercise 2
+
+```bash
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 700 bytes | 63.00 KiB/s, done.
+From https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions
+   34d83d5..f11b4ea  main       -> origin/main
+Updating 34d83d5..f11b4ea
+Fast-forward
+ service.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 service.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/service-redesign)
+$ git add --all
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   service.html
+
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/service-redesign)
+$ git commit -m "added services list"
+[ft/service-redesign 44762e8] added services list
+ 1 file changed, 16 insertions(+), 9 deletions(-)
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 498 bytes | 498.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git add --all
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git commit -m "added new services"
+[main 0dfbf09] added new services
+ 1 file changed, 15 insertions(+), 9 deletions(-)
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 502 bytes | 502.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+   f11b4ea..0dfbf09  main -> main
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/service-redesign)
+$ git merge main
+Auto-merging service.html
+CONFLICT (content): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/service-redesign|MERGING)
+$ git add service.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/service-redesign|MERGING)
+$ git commit
+[ft/service-redesign 55edb8f] Merge branch 'main' into ft/service-redesign
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 431 bytes | 431.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+   44762e8..55edb8f  ft/service-redesign -> ft/service-redesign
 ```
