@@ -922,3 +922,127 @@ To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
   0023db2..193ee96  ft/faq-page -> ft/faq-page
 branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 ```
+
+### Exercise 2
+
+```bash
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git add --all
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git commit -m "feat: added home contents"
+[main ab603fc] feat: added home contents
+ 2 files changed, 9 insertions(+), 20 deletions(-)
+ delete mode 100644 team.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git log
+commit 193ee9678a310a974ad7a229a5737942ca242740 (HEAD -> ft/home-page-redesign, origin/ft/faq-page, ft/faq-page)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:44:00 2022 +0200
+
+    Revert "feat:add team page"
+
+    This reverts commit 3244e362d5545887d34058e31dd3d5c7df4a5b2f.
+
+commit 0023db20de9fa8d01e263a6c4354b23446886e5f
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:27:36 2022 +0200
+
+    feat:add faq page
+
+commit a71381fbd0ef6570459467483d0dbc6ac4107e47 (origin/ft/contact-page, ft/contact-page)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:20:25 2022 +0200
+
+    feat:add contact page
+
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git rebase main
+dropping 193ee9678a310a974ad7a229a5737942ca242740 Revert "feat:add team page" -- patch contents already upstream
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git log
+commit d50a51c50a1a0408303be76a29ae80325eb6066d (HEAD -> ft/home-page-redesign)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:27:36 2022 +0200
+
+    feat:add faq page
+
+commit 9ddc049a649b34b19ea36b8e20471d673432dbb0
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:20:25 2022 +0200
+
+    feat:add contact page
+
+commit ab603fcc41f3c76a73404d59ff49059ce9b608a3 (main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 15:05:43 2022 +0200
+
+    feat: added home contents
+
+commit 2d855ca9a2b2a0a2a907292ea69f81fa4e5c8530 (origin/main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:56:03 2022 +0200
+
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git add home.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git commit -m "feat: add item lists"
+[ft/home-page-redesign 57a85a3] feat: add item lists
+ 1 file changed, 8 insertions(+)
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+fatal: unable to access 'https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git/': Could not resolve host: github.com
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+fatal: unable to access 'https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git/': Could not resolve host: github.com
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git pull
+fatal: unable to access 'https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git/': Could not resolve host: github.com
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 3.75 KiB | 1.25 MiB/s, done.
+Total 15 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+```
