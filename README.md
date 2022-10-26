@@ -1046,3 +1046,71 @@ remote:
 To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 ```
+
+### Bundle 4
+
+### Exercise 1
+
+```bash
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout main
+Already on 'main'
+M       README.md
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git remote add git-copy https://github.com/Lily-Lilian/Gym-Git-Exercise-2.git
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git remote
+git-copy
+origin
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git add home.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git commit -m "feat:add home paragraph"
+[main 130df91] feat:add home paragraph
+ 1 file changed, 1 insertion(+)
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 343 bytes | 343.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+   e06e7d8..130df91  main -> main
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git push git-copy
+Enumerating objects: 48, done.
+Counting objects: 100% (48/48), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (45/45), done.
+Writing objects: 100% (48/48), 10.96 KiB | 1020.00 KiB/s, done.
+Total 48 (delta 18), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (18/18), done.
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-2.git
+ * [new branch]      main -> main
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$
+```
