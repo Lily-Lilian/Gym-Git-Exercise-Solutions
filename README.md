@@ -1114,3 +1114,218 @@ To https://github.com/Lily-Lilian/Gym-Git-Exercise-2.git
 TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
 $
 ```
+
+### Exercise 2
+
+```bash
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git add footer.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git commit -m "feat:add footer"
+[ft/footer 39e6f17] feat:add footer
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git status
+On branch ft/footer
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   footer.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git add --all
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git commit -m "feat:added footer contents"
+[ft/footer 3ee64f1] feat:added footer contents
+ 1 file changed, 4 insertions(+)
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git push origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 771 bytes | 771.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/squashing)
+$ git merge --squash ft/footer
+Updating 5662a98..3ee64f1
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+ create mode 100644 footer.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/squashing)
+$ git log
+commit 5662a98d03034c8c56560a2667a6553d11ba3a4b (HEAD -> ft/squashing, origin/main, main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Wed Oct 26 08:59:58 2022 +0200
+
+    bundle 4
+
+commit 130df9137766e624d941faf4a871989886c11a34 (git-copy/main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Wed Oct 26 08:50:48 2022 +0200
+
+    feat:add home paragraph
+
+commit e06e7d8102c6962bfa92d2c118434113e81c81cd
+Merge: 4594a09 59c83ed
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 15:57:01 2022 +0200
+
+    Merge branch 'main' of https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions
+
+commit 4594a097704b966ef92c853f5ad77d2d4866fd38
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 15:46:34 2022 +0200
+
+    bundle 3 exercise 2
+
+commit ab603fcc41f3c76a73404d59ff49059ce9b608a3
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 15:05:43 2022 +0200
+
+    feat: added home contents
+
+commit 59c83ed25ac00e057bef7638200398d9f32f5dbf
+Author: Liliane Iradukunda <98592737+Lily-Lilian@users.noreply.github.com>
+Date:   Tue Oct 25 15:02:09 2022 +0200
+
+    Delete team.html
+
+commit 2d855ca9a2b2a0a2a907292ea69f81fa4e5c8530
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:56:03 2022 +0200
+
+    bundle 3
+
+commit a61af8cfa3654b0cf315448359b07c99ac45302c
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 13:44:59 2022 +0200
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 82b3889] footer changes squashing
+ 1 file changed, 16 insertions(+)
+ create mode 100644 footer.html
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/squashing)
+$ git log
+commit 82b3889291d700d9391636ab8184165c853320e5 (HEAD -> ft/squashing)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Wed Oct 26 09:59:30 2022 +0200
+
+    footer changes squashing
+
+commit 5662a98d03034c8c56560a2667a6553d11ba3a4b (origin/main, main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Wed Oct 26 08:59:58 2022 +0200
+
+    bundle 4
+
+commit 130df9137766e624d941faf4a871989886c11a34 (git-copy/main)
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Wed Oct 26 08:50:48 2022 +0200
+
+    feat:add home paragraph
+
+commit e06e7d8102c6962bfa92d2c118434113e81c81cd
+Merge: 4594a09 59c83ed
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 15:57:01 2022 +0200
+
+    Merge branch 'main' of https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions
+
+commit 4594a097704b966ef92c853f5ad77d2d4866fd38
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 15:46:34 2022 +0200
+
+    bundle 3 exercise 2
+
+commit ab603fcc41f3c76a73404d59ff49059ce9b608a3
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 15:05:43 2022 +0200
+
+    feat: added home contents
+
+commit 59c83ed25ac00e057bef7638200398d9f32f5dbf
+Author: Liliane Iradukunda <98592737+Lily-Lilian@users.noreply.github.com>
+Date:   Tue Oct 25 15:02:09 2022 +0200
+
+    Delete team.html
+
+commit 2d855ca9a2b2a0a2a907292ea69f81fa4e5c8530
+Author: Lily-Lilian <lialsina03@gmail.com>
+Date:   Tue Oct 25 14:56:03 2022 +0200
+
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/squashing)
+$ git checkout ft/footer
+Switched to branch 'ft/footer'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git diff ft/squashing
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/footer)
+$ git checkout ft/squashing
+Switched to branch 'ft/squashing'
+
+TheGym@DESKTOP-S5S4V35 MINGW64 ~/Desktop/The Gym/Git-Exercise (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 503 bytes | 503.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/Lily-Lilian/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
